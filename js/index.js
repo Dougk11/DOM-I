@@ -40,3 +40,46 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navList = document.getElementsByTagName("a");
+
+
+for (let i = 0; i < navList.length; i++) {
+  navList[i].textContent = `${siteContent["nav"]["nav-item-"+(i+1)]}`;
+}
+
+let header1 = document.querySelector("h1");
+header1.innerHTML = 'DOM <br> Is<br> Awesome';
+
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+let upperImage = document.getElementById('cta-img');
+upperImage.setAttribute('src', siteContent['cta']['img-src']);
+
+let featAbt = document.querySelectorAll('.top-content .text-content');
+featAbt[0].children[0].textContent = siteContent['main-content']['features-h4'];
+featAbt[0].children[1].textContent = siteContent['main-content']['features-content']
+featAbt[1].children[0].textContent = siteContent['main-content']['about-h4'];
+featAbt[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+let midImage = document.getElementById('middle-img');
+midImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let botSection = document.querySelectorAll('.bottom-content .text-content');
+
+botSection[0].children[0].textContent = siteContent['main-content']['services-h4'];
+botSection[0].children[1].textContent = siteContent['main-content']['services-content'];
+botSection[1].children[0].textContent = siteContent['main-content']['product-h4'];
+botSection[1].children[1].textContent = siteContent['main-content']['product-content'];
+botSection[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+botSection[2].children[1].textContent = siteContent['main-content']['vision-content'];
+
+let contact = document.querySelectorAll('.contact');
+contact[0].children[0].textContent = siteContent['contact']['contact-h4'];
+contact[0].children[1].textContent = siteContent['contact']['address'];
+contact[0].children[2].textContent = siteContent['contact']['phone'];
+contact[0].children[3].textContent = siteContent['contact']['email'];
+
+let footer = document.querySelectorAll('footer');
+footer[0].children[0].textContent = siteContent['footer']['copyright'];
